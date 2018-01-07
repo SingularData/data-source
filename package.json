@@ -1,0 +1,40 @@
+{
+  "name": "data-source",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
+    "@types/node": "^8.5.7",
+    "aws-sdk": "^2.177.0",
+    "chai": "^4.1.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "mocha": "^4.1.0",
+    "prettier": "^1.9.2",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "test": "mocha \"test/**/*.test.ts\" --require ts-node/register"
+  },
+  "lint-staged": {
+    "*.{d.ts,ts,json,md}": ["prettier --write", "git add"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SingularData/data-source.git"
+  },
+  "author": "Haoliang Yu <haholiang.yu@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SingularData/data-source/issues"
+  },
+  "homepage": "https://github.com/SingularData/data-source#readme"
+}
