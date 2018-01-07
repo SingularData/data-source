@@ -3,8 +3,13 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 const s3 = new AWS.S3();
+const sources = JSON.parse(
+  readFileSync(join(__dirname + "/../../data-sources.json"), "utf-8")
+);
+
 const params = {
-  Body: readFileSync(join(__dirname + "/../../data-sources.json"), "utf-8"),
+  // to minify the json
+  Body: JSON.stringify(sources),
   Bucket: "sdn-data",
   Key: "data-sources.json"
 };
