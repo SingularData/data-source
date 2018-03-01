@@ -22,9 +22,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "test": "mocha \"test/**/*.test.ts\" --require ts-node/register",
-    "deploy": "ts-node  script/ts/deploy.ts",
-    "deploy-ci": "bash script/bash/deploy.sh"
+    "test": "mocha \"test/**/*.test.ts\" --require ts-node/register"
   },
   "lint-staged": {
     "*.{d.ts,ts,json,md}": ["prettier --write", "git add"]

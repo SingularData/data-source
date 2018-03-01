@@ -7,7 +7,7 @@ describe("data source", () => {
 
   before(() => {
     sources = JSON.parse(
-      readFileSync(join(__dirname, "/../data-sources.json"), "utf-8")
+      readFileSync(join(__dirname, "/../data/data-sources.json"), "utf-8")
     );
   });
 

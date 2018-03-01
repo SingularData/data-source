@@ -5,4 +5,14 @@ node_js:
 
 script:
   - npm run test
-  - npm run deploy-ci
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: $AWS_S3_BUCKET
+  region: $AWS_REGION
+  local_dir: data
+  skip_cleanup: true
+  on:
+    branch: master
