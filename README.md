@@ -1,4 +1,4 @@
-# SingularData.net Data Source
+# SingularData Data Source
 
 This repository hosts the list of open data sources that are being harvested by [SingularData.net](singulardata.net).
 
